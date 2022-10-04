@@ -8,13 +8,16 @@
   },
   "devDependencies": {
     "@mdi/js": "^7.0.96",
-    "@nuxt/content": "^2.0.1",
-    "nuxt": "3.0.0-rc.6",
-    "sass": "^1.54.0",
-    "simple-icons": "^7.5.0",
-    "vite-plugin-vuetify": "^1.0.0-alpha.14"
+    "@nuxt/content": "^2.1.1",
+    "@nuxt/kit": "^3.0.0-rc.11",
+    "nuxt": "^3.0.0-rc.11",
+    "sass": "^1.55.0",
+    "simple-icons": "^7.14.0",
+    "vite": "^3.1.4",
+    "vite-plugin-vuetify": "^1.0.0-alpha.17"
   },
   "dependencies": {
-    "vuetify": "^3.0.0-beta.5"
+    "vue": "^3.2.40",
+    "vuetify": "^3.0.0-beta.11"
   }
 }

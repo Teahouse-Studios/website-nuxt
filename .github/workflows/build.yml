@@ -13,15 +13,15 @@ jobs:
       - name: Use Node.js
         uses: actions/setup-node@v1
         with:
-          node-version: '16.x'
+          node-version: '18.x'
       - name: Install
         run: yarn
       - name: Build
-        run: yarn build
+        run: yarn generate
       - name: Upload
         uses: Teahouse-Studios/aliyun-oss-action@0.6
         with:
           KEY_ID: ${{ secrets.KEY_ID }}
           KEY_SECRET: ${{ secrets.KEY_SECRET }}
           BUCKET: web-teahouse-team
-          LOCAL_PATH: ./dist/
+          LOCAL_PATH: ./.output/public/

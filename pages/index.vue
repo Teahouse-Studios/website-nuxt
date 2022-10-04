@@ -22,7 +22,11 @@
                 <v-btn
                   variant="text"
                   :prepend-icon="mdiArrowRight"
-                  @click="$refs.about?.scrollIntoView({ behavior: 'smooth' })"
+                  @click="
+                    ;($refs.about as HTMLElement).scrollIntoView({
+                      behavior: 'smooth',
+                    })
+                  "
                 >
                   了解更多
                 </v-btn>
@@ -243,7 +247,6 @@ import {
 } from '@mdi/js'
 
 import ExLink from '@/components/ExLink.vue'
-import { onMounted } from 'vue'
 import News from '~~/components/News.vue'
 
 let posts: any[] = $ref([])
@@ -258,6 +261,9 @@ function formatDate(date: Date) {
     date.getMonth() + 1
   } 月 ${date.getDate()} 日`
 }
+useHead({
+  title: '茶馆工作室',
+})
 </script>
 <style lang="scss">
 .fp-player {

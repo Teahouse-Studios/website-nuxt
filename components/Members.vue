@@ -8,23 +8,27 @@
     <v-list class="m-5">
       <div v-for="m in members" :key="m.name">
         <v-list-item three-line :to="`/members/${m.page}`">
-          <v-list-item-avatar>
-            <v-avatar size="70">
-              <img :src="`/dyn/avatars/${m.avatar}`" class="pfp-responsive" />
-            </v-avatar>
-          </v-list-item-avatar>
+          <div class="d-flex">
+            <v-list-item-media>
+              <v-avatar size="70">
+                <img :src="`/dyn/avatars/${m.avatar}`" class="pfp-responsive" />
+              </v-avatar>
+            </v-list-item-media>
 
-          <v-list-item-header class="ml-4">
-            <v-list-item-title>{{ m.name }}</v-list-item-title>
-            <v-list-item-subtitle style="text-overflow: unset; display: unset">
-              <v-icon size="x-small" class="mr-1">{{ mdiBriefcase }} </v-icon
-              >{{ m.title.join('、') }}
-            </v-list-item-subtitle>
-            <v-list-item-subtitle>
-              <v-icon size="x-small" class="mr-1">{{ mdiEmail }} </v-icon
-              >{{ m.email }}&ZeroWidthSpace;&#64;&ZeroWidthSpace;teahou.se
-            </v-list-item-subtitle>
-          </v-list-item-header>
+            <v-list-item-title class="ml-4">
+              <v-list-item-title>{{ m.name }}</v-list-item-title>
+              <v-list-item-subtitle
+                style="text-overflow: unset; display: unset"
+              >
+                <v-icon size="x-small" class="mr-1">{{ mdiBriefcase }} </v-icon
+                >{{ m.title.join('、') }}
+              </v-list-item-subtitle>
+              <v-list-item-subtitle>
+                <v-icon size="x-small" class="mr-1">{{ mdiEmail }} </v-icon
+                >{{ m.email }}&ZeroWidthSpace;&#64;&ZeroWidthSpace;teahou.se
+              </v-list-item-subtitle>
+            </v-list-item-title>
+          </div>
 
           <template #append>
             <div>

@@ -9,13 +9,14 @@ export default defineNuxtConfig({
   modules: [
     '@nuxt/content',
     async (options, nuxt) => {
-      nuxt.hooks.hook('vite:extendConfig', (config) =>
-        config.plugins.push(
+      nuxt.hooks.hook('vite:extendConfig', (config) => {
+        config.plugins = [
+          ...(config.plugins ?? []),
           vuetify({
             autoImport: true,
-          })
-        )
-      )
+          }),
+        ]
+      })
     },
   ],
   router: {
@@ -34,9 +35,5 @@ export default defineNuxtConfig({
   build: {
     transpile: ['vuetify'],
   },
-  vite: {
-    ssr: {
-      noExternal: ['vuetify'],
-    },
-  },
+  vite: {},
 })

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-container class="pt-4 pb-8" v-if="!isIndex">
+    <v-container class="pt-4 pb-8">
       <v-btn
         class="ml-n3"
         to="/members/"
@@ -86,7 +86,6 @@
         ></v-container>
       </v-card>
     </v-container>
-    <Members v-else />
   </div>
 </template>
 
@@ -103,13 +102,16 @@ import { siFandom } from 'simple-icons/icons'
 import NotFound from '../404.vue'
 
 import members from '@/data/members'
-import { useRoute } from 'vue-router'
 
 const route = useRoute()
 const name = route.path.split('/').pop()
-const member = members.find((m) => m.page === name)!
+const member = $ref(members.find((m) => m.page === name)!)
 
-const isIndex = $ref(useRoute().path === '/members/')
+useHead({
+  titleTemplate: () => {
+    return `${member.name}：${member.title.join('、')} - 成员 - 茶馆工作室`
+  },
+})
 </script>
 <style lang="scss">
 @import '~/assets/styles/markdown.scss';

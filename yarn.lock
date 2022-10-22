@@ -5234,6 +5234,11 @@ vue-router@^4.1.5:
   dependencies:
     "@vue/devtools-api" "^6.1.4"
 
+vue-zoomer@^0.4.0-beta.2:
+  version "0.4.0-beta.2"
+  resolved "https://registry.npmjs.org/vue-zoomer/-/vue-zoomer-0.4.0-beta.2.tgz#6adbc0c05b0f36a9b8d366cd8036f5f52e9c9ccb"
+  integrity sha512-qS/EoO86oDDHbaSMT4gg24YYcDElROFvRjUSFcYg9P7IHpScUT+qRnywZMChjB+0mS+GXQJWXqQa8uztmwF+pw==
+
 vue@^3.2.39, vue@^3.2.40:
   version "3.2.40"
   resolved "https://registry.npmjs.org/vue/-/vue-3.2.40.tgz#23f387f6f9b3a0767938db6751e4fb5900f0ee34"

@@ -4,18 +4,15 @@
       <div
         class="text-h4 font-weight-bold mb-3"
         style="line-height: 3.75rem"
-        v-text="p.title.rendered"
+        v-text="p.title"
       ></div>
       <div
         class="text-subtitle-2 mb-3"
-        v-text="formatDate(new Date(p.date))"
+        v-text="formatDate(new Date(p.published))"
       ></div>
-      <div
-        class="text-subtitle-1 mb-3"
-        v-text="p.yoast_head_json.og_description.replace(/(<([^>]+)>)/gi, '')"
-      ></div>
+      <div class="text-subtitle-1 mb-3" v-text="p.description"></div>
       <v-btn
-        :href="p.link"
+        :href="p._path"
         variant="text"
         :prepend-icon="mdiArrowRight"
         class="mb-3"
@@ -26,14 +23,5 @@
   </v-col>
 </template>
 <script setup>
-onMounted(async () => {
-  posts = await (
-    await $fetch(
-      'https://story.teahouse.team/wp-json/wp/v2/posts/?per_page=3&context=embed',
-      {
-        lazy: true,
-      }
-    )
-  ).json()
-})
+const posts = await queryContent('blog').limit(5).find()
 </script>

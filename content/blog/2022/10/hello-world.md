@@ -16,12 +16,7 @@ links:
 
 与用户和粉丝们保持连接是茶馆工作室的重要任务。因此，今天我们推出了茶馆工作室官方博客《茶馆》。
 
-::fig
-![《茶馆》的早期样子](/dyn/blog/2022/10/hello-world/early-look.png){.resp}
-
-#caption
-《茶馆》的早期样子
-::
+<Fig src="/dyn/blog/2022/10/hello-world/early-look.png" caption="《茶馆》的早期样子" />
 
 作为我们的社交媒体矩阵的一部分，《茶馆》博客将会持续（虽然周期就不一定了）更新新的文章和内容。这包括：
 

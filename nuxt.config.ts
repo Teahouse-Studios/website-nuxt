@@ -1,4 +1,3 @@
-import { defineNuxtConfig } from 'nuxt'
 import vuetify from 'vite-plugin-vuetify'
 
 // https://v3.nuxtjs.org/api/configuration/nuxt.config

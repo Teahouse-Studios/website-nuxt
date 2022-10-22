@@ -64,31 +64,24 @@
     <v-divider></v-divider>
     <section>
       <v-container class="d-flex align-center justify-center my-4">
-        <v-row v-if="posts.length !== 0" class="px-4">
+        <v-row class="px-4">
           <v-col
             cols="12"
             class="d-flex align-start justify-start text-h4 font-weight-bold mb-3"
           >
             新闻
           </v-col>
-          <ClientOnly>
-            <News />
-          </ClientOnly>
+          <News />
 
           <v-col cols="12"
             ><v-btn
               class="ml-auto mr-0"
-              href="https://story.teahouse.team/"
+              to="/blog"
               variant="text"
               :prepend-icon="mdiNewspaperVariantOutline"
               >更多新闻</v-btn
             ></v-col
           >
-        </v-row>
-        <v-row v-else class="px-4">
-          <v-col cols="12" md="4">
-            <v-progress-circular indeterminate></v-progress-circular>
-          </v-col>
         </v-row>
       </v-container>
     </section>
@@ -249,7 +242,6 @@ import {
 import ExLink from '@/components/ExLink.vue'
 import News from '~~/components/News.vue'
 
-let posts: any[] = $ref([])
 let video = $ref(0)
 const videos = [
   'https://player.bilibili.com/player.html?aid=716333939&bvid=BV1ZX4y1A7jY&cid=357776775&page=1',

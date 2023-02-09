@@ -1,10 +1,14 @@
 import { defineNuxtPlugin } from '#app'
 import { createVuetify } from 'vuetify' // Styles
 import { aliases, mdi } from 'vuetify/iconsets/mdi-svg'
-// https://vuetifyjs.com/en/introduction/why-vuetify/#feature-guides
+import * as components from 'vuetify/components'
+import * as directives from 'vuetify/directives'
 
 export default defineNuxtPlugin((app) => {
   const vuetify = createVuetify({
+    ssr: true,
+    components,
+    directives,
     icons: {
       defaultSet: 'mdi',
       aliases,

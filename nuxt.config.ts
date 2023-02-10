@@ -15,7 +15,7 @@ export default defineNuxtConfig({
   modules: [
     '@nuxt/image-edge',
     '@nuxt/content',
-    async (options, nuxt) => {
+    async (_options, nuxt) => {
       nuxt.hooks.hook('vite:extendConfig', (config) => {
         config.plugins = [
           ...(config.plugins ?? []),

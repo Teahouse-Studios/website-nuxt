@@ -1,10 +1,8 @@
 <template>
   <v-app class="text-body-1">
     <t-header />
-    <v-main>
-      <v-container class="pt-4 pb-8 markdown-render">
-        <slot />
-      </v-container>
+    <v-main class="pt-4 pb-8 prose">
+      <slot />
     </v-main>
     <t-footer />
   </v-app>

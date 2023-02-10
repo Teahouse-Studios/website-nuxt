@@ -1,19 +1,20 @@
 <template>
-  <v-container class="py-4">
-    <h1 class="text-h3 mt-6 mb-3">成员</h1>
-    <p class="text-body-1">
+  <div class="container mx-auto mb-4">
+    <h1 class="text-5xl font-extrabold my-4">成员</h1>
+    <p class="mb-4">
       茶馆工作室目前有
       <!-- {{ members.length }} -->24 位成员。他们来自五湖四海，精通各项技能。
     </p>
-    <v-list class="m-5">
+    <ul class="">
       <div v-for="m in members" :key="m.name">
         <v-list-item three-line :to="`/members/${m.page}`">
-          <div class="d-flex">
-            <v-list-item-media>
-              <v-avatar size="70">
-                <img :src="`/dyn/avatars/${m.avatar}`" class="pfp-responsive" />
-              </v-avatar>
-            </v-list-item-media>
+          <div class="flex">
+            <v-avatar size="70">
+              <nuxt-img
+                :src="`/dyn/avatars/${m.avatar}`"
+                class="pfp-responsive"
+              />
+            </v-avatar>
 
             <v-list-item-title class="ml-4">
               <v-list-item-title>{{ m.name }}</v-list-item-title>
@@ -77,12 +78,12 @@
         </v-list-item>
         <v-divider></v-divider>
       </div>
-    </v-list>
-  </v-container>
+    </ul>
+  </div>
 </template>
 <script lang="ts" setup>
 import { mdiEmail, mdiGithub, mdiTwitter, mdiWeb, mdiBriefcase } from '@mdi/js'
-import { siFandom } from 'simple-icons/icons'
+import { siFandom } from 'simple-icons'
 
 import members from '@/data/members'
 </script>

@@ -26,11 +26,4 @@ links:
 
 同时，《茶馆》也会推送部分来自我们其他社交媒体的内容，例如 B 站视频。
 
-::fig
-[![茶馆工作室 B 站账号](/dyn/blog/2022/10/hello-world/bilibili.png){.resp}](https://space.bilibili.com/406275313)
-
-#caption
-话说也来关注一下我们的 [B 站账号](https://space.bilibili.com/406275313)？
-::
-
 下篇文章见。

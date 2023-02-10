@@ -5,3 +5,40 @@
 .pfp-responsive {
   width: 100%;
 }
+
+@font-face {
+  font-family: 'InterVar';
+  font-weight: 300 900;
+  font-display: swap;
+  font-style: normal;
+  src: url('/Inter.var.woff2') format('woff2-variations'),
+    url('/Inter.var.woff2') format('woff2');
+  src: url('/Inter.var.woff2') format('woff2') tech('variations');
+}
+@font-face {
+  font-family: 'InterVar';
+  font-weight: 300 900;
+  font-display: swap;
+  font-style: italic;
+  src: url('/Inter-Italic.var.woff2') format('woff2-variations'),
+    url('/Inter-Italic.var.woff2') format('woff2');
+  src: url('/Inter-Italic.var.woff2') format('woff2') tech('variations');
+}
+@font-face {
+  font-family: 'JetBrainsMonoVar';
+  font-weight: 300 900;
+  font-display: swap;
+  font-style: normal;
+  src: url('/JetBrainsMono.var.woff2') format('woff2-variations'),
+    url('/JetBrainsMono.var.woff2') format('woff2');
+  src: url('/JetBrainsMono.var.woff2') format('woff2') tech('variations');
+}
+@font-face {
+  font-family: 'JetBrainsMonoVar';
+  font-weight: 300 900;
+  font-display: swap;
+  font-style: italic;
+  src: url('/JetBrainsMono-Italic.var.woff2') format('woff2-variations'),
+    url('/JetBrainsMono-Italic.var.woff2') format('woff2');
+  src: url('/JetBrainsMono-Italic.var.woff2') format('woff2') tech('variations');
+}

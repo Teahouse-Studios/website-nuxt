@@ -9,14 +9,12 @@
         <v-col
           md="6"
           cols="12"
-          class="link-list d-flex text-left align-center align-md-start flex-column"
+          class="link-list flex text-left items-center md:items-start flex-column"
           style="line-height: 24px"
         >
           <div>
             <div>
-              <span class="text-overline mr-3 d-block d-md-inline"
-                >关注我们</span
-              >
+              <span class="text-sm mr-3 block md:inline">关注我们</span>
 
               <v-btn
                 variant="text"
@@ -24,7 +22,7 @@
                 size="small"
                 href="https://teahouse.team/"
               >
-                <v-icon size="small">{{ mdiWeb }}</v-icon>
+                <v-icon>{{ mdiWeb }}</v-icon>
               </v-btn>
               <v-btn
                 variant="text"
@@ -32,7 +30,7 @@
                 size="small"
                 href="https://story.teahouse.team/"
               >
-                <v-icon size="small">{{ mdiNewspaperVariantOutline }}</v-icon>
+                <v-icon>{{ mdiNewspaperVariantOutline }}</v-icon>
               </v-btn>
               <v-btn
                 variant="text"
@@ -40,7 +38,7 @@
                 size="small"
                 href="mailto:admin@teahou.se"
               >
-                <v-icon size="small">{{ mdiEmail }}</v-icon>
+                <v-icon>{{ mdiEmail }}</v-icon>
               </v-btn>
               <v-btn
                 variant="text"
@@ -48,7 +46,7 @@
                 size="small"
                 href="https://space.bilibili.com/406275313"
               >
-                <v-icon size="small">{{ siBilibili.path }}</v-icon>
+                <v-icon>{{ siBilibili.path }}</v-icon>
               </v-btn>
               <v-btn
                 variant="text"
@@ -64,11 +62,11 @@
                 size="small"
                 href="https://afdian.net/@teahouse"
               >
-                <v-icon size="small">{{ mdiLightningBolt }}</v-icon>
+                <v-icon>{{ mdiLightningBolt }}</v-icon>
               </v-btn>
             </div>
             <div class="mb-1">
-              <span class="text-overline mr-3 d-block d-md-inline">产品</span>
+              <span class="text-sm mr-3 block md:inline">产品</span>
               <v-btn variant="text" href="https://meme.teahouse.team/">
                 梗体中文
               </v-btn>
@@ -77,7 +75,7 @@
               </v-btn>
             </div>
             <div class="mb-1">
-              <span class="text-overline mr-3 d-block d-md-inline">法律</span>
+              <span class="text-sm mr-3 block md:inline">法律</span>
               <v-btn variant="text" to="/terms/" :prepend-icon="mdiScript"
                 >服务条款</v-btn
               ><v-btn variant="text" to="/privacy/" :prepend-icon="mdiLock"
@@ -89,15 +87,15 @@
         <v-col
           md="6"
           cols="12"
-          class="text-center text-md-right pt-5 d-flex flex-column align-center align-md-end justify-end"
+          class="text-center md:text-right pt-5 flex flex-column items-center md:items-end justify-end"
         >
           <div>
             <router-link to="/" title="首页">
-              <img
-                src="~/assets/logo.svg"
+              <nuxt-img
+                src="/logo.svg"
                 alt="Teahouse Studios"
                 height="48"
-                class="mx-auto ml-md-auto mr-md-0"
+                class="mx-auto md:ml-auto md:mr-0 h-[48px]"
                 style="filter: invert(1)"
               />
             </router-link>
@@ -130,7 +128,7 @@ import {
   mdiLightningBolt,
   mdiNewspaperVariantOutline,
 } from '@mdi/js'
-import { siBilibili } from 'simple-icons/icons'
+import { siBilibili } from 'simple-icons'
 </script>
 <style>
 .copyright p {

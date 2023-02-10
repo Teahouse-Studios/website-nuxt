@@ -1,7 +1,14 @@
 import vuetify from 'vite-plugin-vuetify'
+import { defineNuxtConfig } from 'nuxt/config'
 
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
+  postcss: {
+    plugins: {
+      tailwindcss: {},
+      autoprefixer: {},
+    },
+  },
   typescript: {
     strict: true,
   },
@@ -14,26 +21,16 @@ export default defineNuxtConfig({
           ...(config.plugins ?? []),
           vuetify({
             autoImport: true,
+            styles: { configFile: 'assets/styles/_variables.scss' },
           }),
         ]
       })
     },
   ],
-  router: {
-    scrollBehavior() {
-      // always scroll to top
-      return { top: 0 }
-    },
-  },
-  content: {
-    // https://content.nuxtjs.org/api/configuration
-  },
   experimental: {
     reactivityTransform: true,
   },
-  css: ['vuetify/styles'],
   build: {
     transpile: ['vuetify'],
   },
-  vite: {},
 })

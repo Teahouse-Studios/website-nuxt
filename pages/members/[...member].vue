@@ -3,7 +3,7 @@
     <BackNav name="成员" to="/members" />
     <v-row>
       <v-col cols="12" md="6">
-        <h1 class="text-h4 mt-6 mb-3 d-inline-block">
+        <h1 class="mt-6 mb-3 inline-block text-3xl font-extrabold">
           <v-avatar size="50"
             ><img
               :src="`/dyn/avatars/${member.avatar}?url`"
@@ -68,13 +68,10 @@
     <v-divider class="my-6"></v-divider>
 
     <v-list-item-subtitle class="mb-3">介绍</v-list-item-subtitle>
-    <v-card>
-      <v-container class="markdown-render">
-        <ContentDoc>
-          <template #not-found> <NotFound /> </template> </ContentDoc
-      ></v-container>
-    </v-card>
   </v-container>
+  <ContentDoc class="prose mx-auto">
+    <template #not-found> <NotFound /> </template>
+  </ContentDoc>
 </template>
 
 <script lang="ts" setup>
@@ -86,7 +83,7 @@ import {
   mdiWeb,
   mdiBriefcase,
 } from '@mdi/js'
-import { siFandom } from 'simple-icons/icons'
+import { siFandom } from 'simple-icons'
 import NotFound from '../404.vue'
 
 import members from '@/data/members'

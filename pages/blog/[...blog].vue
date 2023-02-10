@@ -1,19 +1,23 @@
 <template>
-  <div>
-    <v-container class="pt-4 pb-8">
-      <div class="ma-3">
+  <div class="flex justify-center">
+    <div class="pt-4 pb-8 prose">
+      <hgroup class="ma-3">
         <NuxtLink
           :to="`/blog/category/${content.category}`"
-          class="text-button mb-2"
+          class="text-button mb-2 text-slate-500"
           >{{ content.category }}</NuxtLink
         >
-        <h1 class="text-h2 mb-4">{{ content.title }}</h1>
-        <div class="text-h6 mb-1">{{ content.tagline }}</div>
-        <div class="text-subtitle-1">
-          {{ formatDate(new Date(content.published)) }} · 最后编辑于
-          {{ formatDate(new Date(content.updated)) }}
-        </div>
-      </div>
+        <h1 class="mb-4 text-slate-900">{{ content.title }}</h1>
+        <div class="mb-1 text-slate-700">{{ content.tagline }}</div>
+        <ul
+          class="not-prose text-subtitle-1 text-slate-500 list-none p-0 flex flex-wrap"
+        >
+          <li>{{ formatDate(new Date(content.published)) }}</li>
+          <li class="before:content-['·'] before:mx-1">
+            {{ '最后编辑于 ' + formatDate(new Date(content.updated)) }}
+          </li>
+        </ul>
+      </hgroup>
       <v-container class="mt-3">
         <div class="d-flex">
           <img :src="content.image" class="cover mx-auto" />
@@ -22,12 +26,13 @@
           <template #not-found> <NotFound /> </template> </ContentDoc
       ></v-container>
       <v-list-item three-line :to="`/members/${m.page}`">
-        <div class="d-flex">
-          <v-list-item-media>
-            <v-avatar size="70">
-              <img :src="`/dyn/avatars/${m.avatar}`" class="pfp-responsive" />
-            </v-avatar>
-          </v-list-item-media>
+        <div class="flex">
+          <v-avatar size="70">
+            <nuxt-img
+              :src="`/dyn/avatars/${m.avatar}`"
+              class="pfp-responsive"
+            />
+          </v-avatar>
 
           <v-list-item-title class="ml-4">
             <v-list-item-title>{{ m.name }}</v-list-item-title>
@@ -87,14 +92,14 @@
           </div>
         </template>
       </v-list-item>
-    </v-container>
+    </div>
   </div>
 </template>
 
 <script lang="ts" setup>
 import NotFound from '../404.vue'
 import { mdiEmail, mdiGithub, mdiTwitter, mdiWeb, mdiBriefcase } from '@mdi/js'
-import { siFandom } from 'simple-icons/icons'
+import { siFandom } from 'simple-icons'
 
 import members from '@/data/members'
 

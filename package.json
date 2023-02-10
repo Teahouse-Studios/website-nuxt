@@ -1,29 +1,37 @@
 {
   "private": true,
   "scripts": {
-    "build": "nuxt build",
-    "dev": "nuxt dev",
-    "generate": "nuxt generate",
-    "preview": "nuxt preview"
+    "build": "nuxi build",
+    "dev": "nuxi dev",
+    "generate": "nuxi generate",
+    "preview": "nuxi preview"
   },
   "devDependencies": {
     "@babel/core": "^7.20.12",
     "@mdi/js": "^7.1.96",
     "@nuxt/content": "^2.4.3",
-    "@nuxt/image-edge": "^1.0.0-testing",
+    "@nuxt/image-edge": "1.0.0-27919678.2f5b64b",
     "@nuxt/kit": "^3.1.2",
+    "@tailwindcss/aspect-ratio": "^0.4.2",
+    "@tailwindcss/forms": "^0.5.3",
+    "@tailwindcss/line-clamp": "^0.4.2",
+    "@tailwindcss/typography": "^0.5.9",
     "@types/node": "^18.13.0",
+    "autoprefixer": "^10.4.13",
     "nuxt": "^3.1.2",
+    "postcss": "^8.4.21",
     "sass": "^1.58.0",
     "simple-icons": "^8.4.0",
+    "tailwindcss": "^3.2.6",
     "typescript": "^4.9.5",
     "vite": "^4.1.1",
     "vite-plugin-vuetify": "^1.0.2"
   },
   "dependencies": {
+    "@headlessui/vue": "^1.7.9",
     "vue": "^3.2.47",
     "vue-zoomer": "^0.3.10",
-    "vuetify": "next"
+    "vuetify": "^3"
   },
   "packageManager": "yarn@3.4.1"
 }

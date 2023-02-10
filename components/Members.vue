@@ -83,7 +83,8 @@
 </template>
 <script lang="ts" setup>
 import { mdiEmail, mdiGithub, mdiTwitter, mdiWeb, mdiBriefcase } from '@mdi/js'
-import { siFandom } from 'simple-icons'
+import si from 'simple-icons'
+const { siFandom } = si
 
 import members from '@/data/members'
 </script>

@@ -99,7 +99,8 @@
 <script lang="ts" setup>
 import NotFound from '../404.vue'
 import { mdiEmail, mdiGithub, mdiTwitter, mdiWeb, mdiBriefcase } from '@mdi/js'
-import { siFandom } from 'simple-icons'
+import si from 'simple-icons'
+const { siFandom } = si
 
 import members from '@/data/members'
 

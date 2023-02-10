@@ -128,7 +128,8 @@ import {
   mdiLightningBolt,
   mdiNewspaperVariantOutline,
 } from '@mdi/js'
-import { siBilibili } from 'simple-icons'
+import si from 'simple-icons'
+const { siBilibili } = si
 </script>
 <style>
 .copyright p {

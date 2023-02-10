@@ -83,7 +83,8 @@ import {
   mdiWeb,
   mdiBriefcase,
 } from '@mdi/js'
-import { siFandom } from 'simple-icons'
+import si from 'simple-icons'
+const { siFandom } = si
 import NotFound from '../404.vue'
 
 import members from '@/data/members'

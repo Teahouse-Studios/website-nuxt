@@ -1,6 +1,6 @@
 <template>
   <div class="flex justify-center">
-    <div class="pt-4 pb-8 prose">
+    <div class="pt-4 pb-8 prose max-w-none container">
       <hgroup class="ma-3">
         <NuxtLink
           :to="`/blog/category/${content.category}`"

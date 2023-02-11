@@ -176,7 +176,7 @@
       </v-container>
     </section>
   </div>
-  <div class="flex justify-center prose-sm fixed bottom-2 w-full select-none">
+  <div class="flex justify-center text-sm fixed bottom-2 w-full select-none">
     <v-icon left>{{ mdiChevronDown }}}</v-icon> 向下滚动
   </div>
 </template>

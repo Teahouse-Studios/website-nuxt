@@ -1,5 +1,5 @@
 <template>
-  <v-container class="pt-4 pb-8">
+  <div class="pt-4 pb-8 mx-auto container">
     <BackNav name="成员" to="/members" />
     <v-row>
       <v-col cols="12" md="6">
@@ -68,10 +68,11 @@
     <v-divider class="my-6"></v-divider>
 
     <v-list-item-subtitle class="mb-3">介绍</v-list-item-subtitle>
-  </v-container>
-  <ContentDoc class="prose mx-auto">
+
+  <ContentDoc class="prose mx-auto max-w-none">
     <template #not-found> <NotFound /> </template>
   </ContentDoc>
+  </div>
 </template>
 
 <script lang="ts" setup>

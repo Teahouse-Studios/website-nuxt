@@ -1,8 +1,10 @@
 <template>
   <v-app class="text-body-1">
     <t-header />
-    <v-main class="pt-4 pb-8 prose">
-      <slot />
+    <v-main class="pt-4 pb-8 mx-auto container">
+      <article class="prose max-w-none">
+        <slot />
+      </article>
     </v-main>
     <t-footer />
   </v-app>
